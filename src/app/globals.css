@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+.container{
+  @apply max-w-[1328px] mx-auto;
+}
+@theme {
+  --font-syne: 'Syne', 'sans-serif';
+  --font-Oswald: 'Oswald','sans-serif';
+  --font-montserrat: 'Montserrat','sans-serif';
+}
+
+.custom-square{
+  list-style-type: square;
+}
