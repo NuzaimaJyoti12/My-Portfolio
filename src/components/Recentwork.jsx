@@ -3,6 +3,8 @@ import smartphone from "@/app/assets/smartphone.png";
 import eventTicket from "@/app/assets/eventTicket.png";
 import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
+import Link from "next/link";
+
 
 const Recentwork = () => {
   return (
@@ -10,14 +12,25 @@ const Recentwork = () => {
       <div className="container">
         <div>
           <div className="text-center">
-            <p className="text-[#FF9330] font-bold text-[20px] font-syne">
+            <p className="text-[#FF9330] font-bold text-[16px] sm:text-[18px] md:text-[20px] font-syne">
               Portfolio
             </p>
-            <h2 className="text-[64px] font-bold font-syne relative after:absolute after:bg-[#FFB646] after:size-[64px] after:rounded-full after:top-[12px] after:right-[507px] z-[4] after:z-[-4]">My recent work</h2>
+            <h2
+              className="text-[40px] sm:text-[50px] md:text-[64px] font-bold font-syne relative z-[4]
+                      after:absolute after:bg-[#FFB646] 
+                      after:w-[40px] sm:after:w-[50px] md:after:w-[64px] 
+                      after:h-[40px] sm:after:h-[50px] md:after:h-[64px] 
+                      after:rounded-full after:top-[12px] 
+                      after:right-[120px] sm:after:right-[220px] md:after:right-[475px] 
+                      after:transform after:-translate-x-1/2 after:z-[-4]"
+            >
+              My recent work
+            </h2>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <Image src={smartphone} alt='image' className="pb-6" />
+              <Image src={smartphone} alt="image" className="pb-6" />
               <div className="flex gap-2">
                 <button className="py-[6px] px-4 border-[1px] border-[#08080866] rounded-[40px] text-[#080808CC] text-inter hover:bg-black hover:text-white hover:font-bold hover:border-none">
                   APP
@@ -36,7 +49,7 @@ const Recentwork = () => {
               </div>
             </div>
             <div>
-              <Image src={eventTicket} alt='image' className="pb-6" />
+              <Image src={eventTicket} alt="image" className="pb-6" />
               <div className="flex gap-2">
                 <button className="py-[6px] px-4 border-[1px] border-[#08080866] rounded-[40px] text-[#080808CC] text-inter hover:bg-black hover:text-white hover:font-bold hover:border-none">
                   APP
@@ -55,14 +68,16 @@ const Recentwork = () => {
               </div>
             </div>
           </div>
+          <Link href="/project">
           <div className="text-center flex items-center justify-center transition duration-500">
             <button className="flex items-center justify-center gap-2 w-full py-5 px-6  text-[16px]  font-bold leading-[15px] bg-black  text-white border-[1px] border-black hover:bg-transparent  rounded-[10px] hover:text-black transition duration-700 cursor-pointer ">
               View All Project{" "}
               <span>
-                <MdArrowOutward className="w-6 h-6"/>
+                <MdArrowOutward className="w-6 h-6" />
               </span>
             </button>
           </div>
+          </Link>
         </div>
       </div>
     </section>
